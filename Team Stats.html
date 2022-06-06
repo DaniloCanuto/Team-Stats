@@ -1,0 +1,54 @@
+<script>
+
+const team = {
+
+_players: [
+  {firstName:'Luciano', lastName: 'Juba', age: 22},
+  {firstName:'Javier', lastName: 'Parraguez', age: 32},
+  {firstName: 'Everton', lastName: 'Felipe', age: 24}],
+
+_games: [
+  {opponent: 'Sampaio Côrreia', teamPoints: 1,            
+  opponentPoints: 0},
+  {opponent: 'Guarani', teamPoints: 0, 
+  opponentPoints: 0},
+  {opponent: 'Criciúma', teamPoints: 1, 
+  opponentPoints: 1}],
+
+  get players() {
+    return this._players;
+  },
+
+  get games() {
+    return this._games;
+  },
+
+  addPlayer(newFirstName, newLastName, newAge) 
+
+  {
+    let player = {
+      firstName: newFirstName, 
+      lastName: newLastName, 
+      age: newAge
+      };
+      this.players.push(player);
+  },
+
+   addGame(newOpponent, newTeamPoints, newOpponentPoints)
+   
+  {
+    let game = {
+      opponent: newOpponent, 
+      teamPoints: newTeamPoints, 
+      opponentPoints: newOpponentPoints
+      };
+      this.games.push(game);
+}
+};
+
+team.addGame('Grêmio', 4, 1);
+console.log(team._games);
+
+
+
+</script>
